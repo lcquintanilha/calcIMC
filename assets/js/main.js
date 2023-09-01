@@ -30,25 +30,20 @@ function meuEscopo(){
 
         if(altura.value !== "" && peso.value !== ""){
             let imc = peso.value/((altura.value/100)**2);
+            resultado.style.display = "block"
 
             if(imc < 18.5){
                 resultado.innerHTML = `O seu IMC é de ${imc.toFixed(2)}.<br>Você está <strong>abaixo do peso</strong>`
-                resultado.style.display = "block"
             }else if(imc < 25){
                 resultado.innerHTML = `O seu IMC é de ${imc.toFixed(2)}.<br>Você está com o <strong>peso normal</strong>`
-                resultado.style.display = "block"
             }else if(imc < 30){
                 resultado.innerHTML = `O seu IMC é de ${imc.toFixed(2)}.<br>Você está com <strong>sobrepeso</strong>`
-                resultado.style.display = "block"
             }else if(imc < 35){
                 resultado.innerHTML = `O seu IMC é de ${imc.toFixed(2)}.<br>Você está com <strong>Obesidade grau 1</strong>`
-                resultado.style.display = "block"
             }else if(imc <= 40){
                 resultado.innerHTML = `O seu IMC é de ${imc.toFixed(2)}.<br>Você está com <strong>Obesidade grau 2</strong>`
-                resultado.style.display = "block"
             }else if(imc > 40){
                 resultado.innerHTML = `O seu IMC é de ${imc.toFixed(2)}.<br>Você está com <strong>Obesidade grau 3</strong>`
-                resultado.style.display = "block"
             }
         }
     }
